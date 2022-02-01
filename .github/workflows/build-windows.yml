@@ -79,7 +79,7 @@ jobs:
         working-directory: ./vcpkg
         shell: "bash"
         run: >
-          ./vcpkg.exe install --keep-going zlib winflexbison --triplet ${{ matrix.triplet }}
+          ./vcpkg.exe install --keep-going zlib libxslt winflexbison --triplet ${{ matrix.triplet }}
 
       - name: Windows compilation
         working-directory: .
