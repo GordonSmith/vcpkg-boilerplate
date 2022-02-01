@@ -4,17 +4,8 @@ env:
   VCPKG_BINARY_SOURCES: "clear;nuget,GitHub,readwrite"
 
 on:
-  pull_request:
-    branches:
-      - "master"
-      - "candidate-*"
-      - "!candidate-7.10.*"
-      - "!candidate-7.8.*"
-      - "!candidate-7.6.*"
-      - "!candidate-7.4.*"
-      - "!candidate-7.2.*"
-      - "!candidate-7.0.*"
-      - "!candidate-6.*"
+  push:
+    branches: [main]
 
 jobs:
   pre_job:
