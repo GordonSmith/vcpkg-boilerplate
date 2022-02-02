@@ -60,8 +60,9 @@ jobs:
 
       - name: Windows compilation
         working-directory: .
+        shell: "bash"
         run: |
           mkdir build
           cd build
-          cmake .. -DCMAKE_TOOLCHAIN_FILE=..\vcpkg\scripts\buildsystems\vcpkg.cmake -G "Visual Studio 16 2019" -T host=x64 -A x64
+          cmake .. -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake -G "Visual Studio 16 2019" -T host=x64 -A x64
           cmake --build . -- -m
