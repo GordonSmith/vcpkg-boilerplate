@@ -23,4 +23,13 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
 
+find_package(ICU REQUIRED COMPONENTS data i18n io le lx test tu uc)
+find_package(ZLIB REQUIRED)
+find_package(OpenSSL REQUIRED)
+find_package(LibXslt REQUIRED)
+find_package(FLEX REQUIRED)
+find_package(BISON REQUIRED)
+
 add_executable(BoilerPlate source/main.cpp)
+
+# ./vcpkg.exe install --keep-going icu zlib openssl libxslt winflexbison --triplet x64-windows
